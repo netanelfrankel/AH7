@@ -22,12 +22,15 @@ class Source {
     Node<Integer> curr = head;
     int sum = 0;
     while(curr !=null){
-      System.out.println("Current Node = "+curr);
       sum += curr.val;
       curr = curr.next;
-      System.out.println("Sum = "+ sum+"\n");
     }
     return sum;
+  }
+  public static int sumListRecursive(Node<Integer> head) {
+    // todo
+    if (head == null){return 0;};
+    return head.val + sumListRecursive(head.next);
   }
 
   public static void main(String[] args) {
@@ -45,6 +48,6 @@ class Source {
     // 2 -> 8 -> 3 -> -1 -> 7
     
     System.out.println("Sum of my list: ");
-    System.out.println(Source.sumList(a));
+    System.out.println(Source.sumListRecursive(a));
   }
 }
