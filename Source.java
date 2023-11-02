@@ -6,6 +6,14 @@ class Node<T> {
     this.val = val;
     this.next = null;
   }
+
+  @Override
+  public String toString() {
+    return "Node{" +
+            "val=" + val +
+            ", next=" + next +
+            '}';
+  }
 }
 
 class Source {
@@ -14,8 +22,10 @@ class Source {
     Node<Integer> curr = head;
     int sum = 0;
     while(curr !=null){
+      System.out.println("Current Node = "+curr);
       sum += curr.val;
       curr = curr.next;
+      System.out.println("Sum = "+ sum+"\n");
     }
     return sum;
   }
