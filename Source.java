@@ -11,7 +11,13 @@ class Node<T> {
 class Source {
   public static int sumList(Node<Integer> head) {
     // todo
-    return;
+    Node<Integer> curr = head;
+    int sum = 0;
+    while(curr !=null){
+      sum += curr.val;
+      curr = curr.next;
+    }
+    return sum;
   }
 
   public static void main(String[] args) {
